@@ -18,12 +18,12 @@ public class Match_Results extends AppCompatActivity {
 
 
     public void addGoalTeamA(View view) {
-        TextView teamAGoals = (TextView) view.findViewById(R.id.teamAGoals);
+        TextView teamAGoals = (TextView) findViewById(R.id.teamAGoals);
         teamAGoals.setText(Integer.parseInt(teamAGoals.getText().toString())+1);
 
     }
     public void addFoulTeamA(View view) {
-        TextView teamAFouls = (TextView) view.findViewById(R.id.teamAFouls);
+        TextView teamAFouls = (TextView) findViewById(R.id.teamAFouls);
         teamAFouls.setText(Integer.parseInt(teamAFouls.getText().toString())+1);
     }
     public void increasePossessionTeamA(View view) {
@@ -31,12 +31,12 @@ public class Match_Results extends AppCompatActivity {
     }
 
     public void addGoalTeamB(View view) {
-        TextView teamBGoals = (TextView) view.findViewById(R.id.teamBGoals);
+        TextView teamBGoals = (TextView) findViewById(R.id.teamBGoals);
         teamBGoals.setText(Integer.parseInt(teamBGoals.getText().toString())+1);
     }
 
     public void addFoulTeamB(View view) {
-        TextView teamBFouls = (TextView) view.findViewById(R.id.teamBFouls);
+        TextView teamBFouls = (TextView) findViewById(R.id.teamBFouls);
         teamBFouls.setText(Integer.parseInt(teamBFouls.getText().toString())+1);
     }
 
@@ -45,13 +45,13 @@ public class Match_Results extends AppCompatActivity {
     }
 
     public void resetStates(View view) {
-        TextView textView = (TextView) view.findViewById(R.id.teamAGoals);
+        TextView textView = (TextView) findViewById(R.id.teamAGoals);
         textView.setText(0);
-        textView = (TextView) view.findViewById(R.id.teamAFouls);
+        textView = (TextView) findViewById(R.id.teamAFouls);
         textView.setText(0);
-        textView = (TextView) view.findViewById(R.id.teamBGoals);
+        textView = (TextView) findViewById(R.id.teamBGoals);
         textView.setText(0);
-        textView = (TextView) view.findViewById(R.id.teamBFouls);
+        textView = (TextView) findViewById(R.id.teamBFouls);
         textView.setText(0);
     }
 }
