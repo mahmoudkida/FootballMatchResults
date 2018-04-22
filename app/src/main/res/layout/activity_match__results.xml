@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.LinearLayoutCompat
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context="com.wshwsh.footballmatchresults.Match_Results">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.wshwsh.footballmatchresults.Match_Results"
+    android:paddingBottom="20sp"
+    android:paddingTop="30sp">
 
 
     <android.support.v7.widget.LinearLayoutCompat
@@ -14,48 +16,76 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            app:srcCompat="@drawable/manchester"
+            android:layout_marginBottom="5sp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Manchester City"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" android:id="@+id/teamAName"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="0"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="35sp" android:id="@+id/teamAGoals"/>
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
             android:text="0"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" android:id="@+id/teamAFouls"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
             android:text="50 %"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" android:id="@+id/teamAPossession"/>
 
         <Button
             android:id="@+id/addGoalTeamA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Goal" />
+            android:background="#ee3124"
+            android:text="Add Goal"
+            android:textColor="#fff200"
+            android:textSize="12sp" android:layout_marginBottom="5sp"
+            android:onClick="addGoalTeamA"
+            tools:ignore="OnClick" />
 
         <Button
             android:id="@+id/addFoulTeamA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Foul" />
+            android:text="Add Foul"
+            android:textSize="10sp" android:layout_marginBottom="5sp"
+            android:onClick="addFoulTeamA"/>
 
         <Button
             android:id="@+id/addPossessionTeamA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Increase Possession" />
+            android:text="Increase Possession"
+            android:textSize="11sp"
+            android:onClick="increasePossessionTeamA"/>
 
     </android.support.v7.widget.LinearLayoutCompat>
 
@@ -63,40 +93,40 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
-        android:orientation="vertical">
+        android:orientation="vertical" android:paddingTop="90sp">
+
         <TextView
             android:layout_width="match_parent"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:text="Teams"
-            />
+            android:textAlignment="center" />
 
 
         <TextView
             android:layout_width="match_parent"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:text="Goals"
-            />
+            android:textAlignment="center" android:layout_marginTop="20sp"/>
+
         <TextView
             android:layout_width="match_parent"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:text="Fouls"
-            />
+            android:textAlignment="center" android:layout_marginTop="20sp"/>
+
         <TextView
             android:layout_width="match_parent"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
-            android:text="Possession%"
-            />
+            android:text="Possession"
+            android:textAlignment="center"  android:layout_marginTop="20sp"/>
 
 
         <Button
             android:id="@+id/reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reset" />
+            android:text="Reset"  android:layout_marginTop="170sp"
+            android:onClick="resetStates"/>
 
     </android.support.v7.widget.LinearLayoutCompat>
 
@@ -104,58 +134,81 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical" android:gravity="center_horizontal"
-        android:visibility="visible"
-        >
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            app:srcCompat="@drawable/liverpool"
+            android:layout_marginBottom="5sp"/>
+
         <TextView
             android:layout_width="match_parent"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:text="Liverpool"
-           />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" android:id="@+id/teamBName"/>
 
         <TextView
             android:layout_width="match_parent"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:text="0"
-            />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="35sp" android:id="@+id/teamBGoals"/>
 
         <TextView
             android:layout_width="match_parent"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
             android:text="0"
-            />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" android:id="@+id/teamBFouls"/>
 
         <TextView
             android:layout_width="match_parent"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
             android:text="50 %"
-            />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" android:id="@+id/teamBPossession"/>
 
         <Button
             android:id="@+id/addGoalTeamB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Goal" />
+            android:background="#00a398"
+            android:text="Add Goal"
+            android:textColor="#d00027"
+            android:textSize="12sp" android:layout_marginBottom="5sp"
+            android:onClick="addGoalTeamB"/>
 
         <Button
             android:id="@+id/addFoulTeamB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Foul" />
+            android:text="Add Foul"
+            android:textSize="11sp" android:layout_marginBottom="5sp"
+            android:onClick="addFoulTeamB"/>
 
         <Button
             android:id="@+id/addPossessionTeamB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Increase Possession" />
+            android:text="Increase Possession"
+            android:textSize="11sp"
+            android:onClick="increasePossessionTeamB"/>
 
 
     </android.support.v7.widget.LinearLayoutCompat>
-
 
 
 </android.support.v7.widget.LinearLayoutCompat>
