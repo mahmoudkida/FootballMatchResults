@@ -6,6 +6,8 @@
         <item name="colorPrimary">#4beae4</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="titleTextColor">#1f0858</item>
+
     </style>
 
 </resources>
